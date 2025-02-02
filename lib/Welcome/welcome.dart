@@ -1,5 +1,6 @@
-import 'package:carsapp/Main/bottom_nav_bar.dart';
 import 'package:carsapp/SharedTheams/app_colors.dart';
+import 'package:carsapp/Welcome/chose_login_method.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -34,7 +35,7 @@ class _WelcomePageState extends State<WelcomePage> {
               children: <Widget>[
                 Text(
                   'Welcome To 👋🏻',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.bebasNeue(
                       color: AppColors.White,
                       fontSize: 35,
                       fontWeight: FontWeight.w800),
@@ -44,36 +45,28 @@ class _WelcomePageState extends State<WelcomePage> {
                 ),
                 Text(
                   'Carea',
-                  style: GoogleFonts.poppins(
+                  style: GoogleFonts.spectral(
                       color: AppColors.White,
                       fontSize: 80,
                       fontWeight: FontWeight.w900),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 20,
                 ),
                 Container(
                   padding: EdgeInsets.all(3),
                   margin: EdgeInsets.only(right: 20, left: 20),
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      gradient: LinearGradient(
-                          begin: Alignment.bottomCenter,
-                          colors: [
-                            AppColors.Backgroundcolor,
-                            AppColors.Backgroundcolor,
-                            // AppColors.Grey
-                            // Colors.orange[800]!,
-                            // Colors.green[300]!,
-                          ])),
+                      color: AppColors.Backgroundcolor),
                   child: MaterialButton(
                     minWidth: double.infinity,
                     onPressed: () {
-                      Navigator.push(
+                      Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(
+                          CupertinoPageRoute(
                               builder: (BuildContext context) =>
-                                  const BottomNavBar()));
+                                  const ChoseLoginMethod()));
                     },
                     child: Text(
                       'START',
