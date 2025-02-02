@@ -13,7 +13,7 @@ class _CategorySectionState extends State<CategorySection> {
   List cars = ['Dodge', 'Mercedes', 'BMW', 'Audi', 'Volkswagen', 'Chevrolet'];
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 50,
       child: ListView(
         scrollDirection: Axis.horizontal,
